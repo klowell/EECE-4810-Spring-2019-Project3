@@ -1,0 +1,35 @@
+Name: Kristopher Lowell
+
+The .zip archive should contain five files total:
+	1. Project3.c		- the main source file
+	2. sched_sim.c 		- the source file for the necessary data types and functions
+	3. sched_sim.h		- the header file for the necessary data types and functions
+	4. Makefile		- the makefile to properly make the assignment's executable(s)
+	5. README		- the file explaining the contents of the assignment as well as how to execute the assignment
+
+The following outlines instructions on how to properly execute this assignment:
+
+1. Open "Terminal" application in a Linux/Unix environment.
+2. Using change directory commands, access the directory the project is saved in.
+3. Compile the program files to make the executable for the main program.
+	a. Type "make all" then press the Enter key.
+4. Run executable
+	a. Type "./Project3" followed by a space. 
+	b. Type the name of the desired input file followed by a space.
+	c. Type the name of the desired output file followed by a space.
+	d. Type the desired interval in which the simulation will print information
+	e. Press the Enter key.
+	f. Ex. "./Project3 testin1.dat out1.txt 1"
+	g. Any arguments past the previously described will be ignored.
+5. Remove the object and executable files when finished executing the assignment.
+	a. Type "make clean" then press the Enter key.
+
+Notes:
+	The included program is designed to simulate various types of scheduling algorithms used within a CPU.  These different 	algoriths include: first-come-first-served (FCFS), shortest-job-fist (SJF), shortest-time-to-completion-first (STCF), round robin with a quantum of 2 (RR), and non-preemptive priority scheduling (NPP).  
+
+The quantum of the round robin may be altered by changing the value stored in the global variable "QUANTUM".  
+
+Additional scheduling algorithms may be implemented by first changing the value stored in the the global variable "NUM_OF_ALGORITHMS" and proper programming in the simulation function.  
+
+Aging has been implemented in the non-preemptive priority scheduling algorithm.  A process will have its priority increased every 25 cycles in order to minimize starvation.
+
